@@ -1,6 +1,6 @@
 <% include partials/_header %>
 
-    <form method="POST" action="/process" class="form-group has-danger" style="margin-top: 20%">
+    <form method="POST" action="/puntuacion" class="form-group has-danger" style="margin-top: 20%">
         <div class="cotainer">
             <div class="row">
                 <div class="col-sm-6"">
@@ -12,7 +12,7 @@
                     <div class="invalid-feedback">This field can not be empty!</div>
                     <% } %>
                     <% }else { %>
-                    <input class="form-control" type="text" name="titles" placeholder="Nombre o Apodo...">
+                    <input class="form-control" type="text" name="competidor1" placeholder="Nombre o Apodo...">
                     <% } %>
 
 
@@ -30,7 +30,7 @@
                     <div class="invalid-feedback">This field can not be empty!</div>
                     <% } %>
                     <% }else { %>
-                    <input class="form-control" type="text" name="playlistname" placeholder="Nombre o Apodo...">
+                    <input class="form-control" type="text" name="competidor2" placeholder="Nombre o Apodo...">
                     <% } %>
 
 
