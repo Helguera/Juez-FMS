@@ -1,0 +1,64 @@
+body {
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    color: white;
+    opacity: 0.95;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.form-control{
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
+  }
+
+.wrapper_button {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -60%);
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.footer {
+    background-color:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+
+ img.animated-gif{
+    width: 800px;
+    height: auto;
+  }
+
+
+
+
+
+
+  .btn_area{
+    padding:10px;
+    text-align:right
+  }
+  
+  @media screen and (max-width:480px){
+    .btn{
+      display:block;
+      margin:5px;
+      width:100%
+    }
+  }
+ 

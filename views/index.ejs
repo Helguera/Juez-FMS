@@ -1,0 +1,64 @@
+<% include partials/_header %>
+
+    <form method="POST" action="/process" class="form-group has-danger" style="margin-top: 20%">
+        <div class="cotainer">
+            <div class="row">
+                <div class="col-sm-6"">
+                    <h5>Primer Competidor:</h5>
+                    <% if (typeof(invalid) != 'undefined'){ %>
+                    <% if (invalid == true) { %>
+                    <input class=" form-control is-invalid" type="text" name="titles"
+                    placeholder="Bebe, I just wanna live with you. I love you Mélissa.">
+                    <div class="invalid-feedback">This field can not be empty!</div>
+                    <% } %>
+                    <% }else { %>
+                    <input class="form-control" type="text" name="titles" placeholder="Nombre o Apodo...">
+                    <% } %>
+
+
+
+
+                </div>
+                <div class="col-sm-6">
+
+
+                    <h5>Segundo Competidor:</h5>
+                    <% if (typeof(invalid) != 'undefined'){ %>
+                    <% if (invalid == true) { %>
+                    <input class="form-control is-invalid" type="text" name="playlistname"
+                        placeholder="Playlist for that person...">
+                    <div class="invalid-feedback">This field can not be empty!</div>
+                    <% } %>
+                    <% }else { %>
+                    <input class="form-control" type="text" name="playlistname" placeholder="Nombre o Apodo...">
+                    <% } %>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <br>
+
+        <br><br><br>
+        <center>
+            <button type="submit" class="btn btn-warning btn-lg" style="vertical-align: middle">
+                <i class="icon-double-angle-right"></i>
+                Comenzar!
+                <i class="icon-double-angle-left"></i>
+            </button></center>
+    </form>
+
+
+
+    <div class="footer">
+        <p class="lead" style="color: white; font-size: 10px; margin-top: 15px">Created with ❤️ by <a
+                href="https://github.com/helguera">@Helguera</a></p>
+    </div>
+
+</body>
+
+</html>
