@@ -23,16 +23,25 @@ app.get('/', (req, res) => {
 });
 
 app.post('/puntuacion', (req, res) => {
-    var competidor1 = req.body.competidor1;
-    var competidor2 = req.body.competidor2;
 
-    req.session.competidor1 = competidor1;
-    req.session.competidor2 = competidor2;
+    var invalid = false;
+    if (req.body.competidor1 == "" || req.body.competidor2 == "") {
+        invalid = true;
+        res.render('index', {
+            invalid
+        })
+    } else {
 
-    res.render('puntos', {
-        competidor1, competidor2
-    });
+        var competidor1 = req.body.competidor1;
+        var competidor2 = req.body.competidor2;
 
+        req.session.competidor1 = competidor1;
+        req.session.competidor2 = competidor2;
+
+        res.render('puntos', {
+            competidor1, competidor2, invalid
+        });
+    }
 });
 
 app.post('/resultado', (req, res) => {
@@ -228,23 +237,33 @@ app.post('/resultado', (req, res) => {
 
     var competidor1 = req.session.competidor1;
     var competidor2 = req.session.competidor2;
+    var replica = false;
 
     if (Math.abs(puntos_competidor1 - puntos_competidor2) <= 5) {
-
+        replica = true;
+        res.render('resultado', {
+            puntos_ganador: puntos_competidor1,
+            puntos_perdedor: puntos_competidor2,
+            ganador: competidor1,
+            perdedor: competidor2,
+            replica
+        });
     } else {
         if (puntos_competidor1 > puntos_competidor2) {
             res.render('resultado', {
                 puntos_ganador: puntos_competidor1,
                 puntos_perdedor: puntos_competidor2,
                 ganador: competidor1,
-                perdedor: competidor2
+                perdedor: competidor2,
+                replica
             });
         } else {
             res.render('resultado', {
                 puntos_ganador: puntos_competidor2,
                 puntos_perdedor: puntos_competidor1,
                 ganador: competidor2,
-                perdedor: competidor1
+                perdedor: competidor1,
+                replica
             });
         }
     }

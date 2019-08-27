@@ -1,8 +1,36 @@
 <% include partials/_header %>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <center>
+                <a href="#easymode" class="btn btn-block btn-warning"
+                    style="width: 50%; font-family: 'Carter One';font-size: 22px;">Easy Mode</a>
+                <a href="#tematicas" class="btn btn-block btn-warning"
+                    style="width: 50%; font-family: 'Carter One';font-size: 22px;">Temáticas</a>
+                <a href="#sangre" class="btn btn-block btn-warning"
+                    style="width: 50%; font-family: 'Carter One';font-size: 22px;">Sangre</a>
+            </center>
+        </div>
+        <div class="col-sm-6">
+            <center>
+                <a href="#hardmode" class="btn btn-block btn-warning"
+                    style="width: 50%; font-family: 'Carter One';font-size: 22px;">Hard Mode</a>
+                <a href="#personajes" class="btn btn-block btn-warning"
+                    style="width: 50%; font-family: 'Carter One';font-size: 22px;">Personajes</a>
+                <a href="#deluxe" class="btn btn-block btn-warning"
+                    style="width: 50%; font-family: 'Carter One';font-size: 22px;">Deluxe</a>
+            </center>
+        </div>
+    </div>
+</div>
+
+
+
+<br><br>
 <form method="POST" action="/resultado" class="form-group has-danger">
 
-    <div class="card text-white bg-dark mb-3">
+    <div class="card text-white bg-dark mb-3" id="easymode">
         <div class="card-header">
             <h2>Easy Mode - Palabras 10 Segundos</h2>
         </div>
@@ -10,7 +38,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp1_easymode_pat1" name="comp1_easymode_pat1">
@@ -55,6 +85,7 @@
                             <label for="exampleSelect1">Patrón 5</label>
                             <select class="form-control" id="comp1_easymode_pat5" name="comp1_easymode_pat5">
                                 <option>0</option>
+                                <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
@@ -98,7 +129,11 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><center><h3><%= competidor2 %></h3></center></center>
+                        <center>
+                            <center>
+                                <h3><%= competidor2 %></h3>
+                            </center>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp2_easymode_pat1" name="comp2_easymode_pat1">
@@ -195,7 +230,7 @@
 
     <br><br>
 
-    <div class="card text-white bg-dark mb-3">
+    <div class="card text-white bg-dark mb-3" id="hardmode">
         <div class="card-header">
             <h2>Hard Mode - Palabras 5 Segundos</h2>
         </div>
@@ -203,7 +238,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp1_hardmode_pat1" name="comp1_hardmode_pat1">
@@ -291,7 +328,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp2_hardmode_pat1" name="comp2_hardmode_pat1">
@@ -388,7 +427,7 @@
 
     <br><br>
 
-    <div class="card text-white bg-dark mb-3">
+    <div class="card text-white bg-dark mb-3" id="tematicas">
         <div class="card-header">
             <h2>Temáticas - Primera Vuelta</h2>
         </div>
@@ -396,7 +435,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp1_tematica1_pat1" name="comp1_tematica1_pat1">
@@ -465,7 +506,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp2_tematica1_pat1" name="comp2_tematica1_pat1">
@@ -551,7 +594,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp1_tematica2_pat1" name="comp1_tematica2_pat1">
@@ -620,7 +665,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp2_tematica2_pat1" name="comp2_tematica2_pat1">
@@ -698,7 +745,7 @@
 
     <br><br>
 
-    <div class="card text-white bg-dark mb-3">
+    <div class="card text-white bg-dark mb-3" id="personajes">
         <div class="card-header">
             <h2>Personajes Contrapuestos</h2>
         </div>
@@ -706,7 +753,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp1_personajes_pat1" name="comp1_personajes_pat1">
@@ -794,7 +843,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp2_personajes_pat1" name="comp2_personajes_pat1">
@@ -891,7 +942,7 @@
 
     <br><br>
 
-    <div class="card text-white bg-dark mb-3">
+    <div class="card text-white bg-dark mb-3" id="sangre">
         <div class="card-header">
             <h2>Minuto a Sangre - Primera Vuelta</h2>
         </div>
@@ -899,7 +950,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp1_sangre1_pat1" name="comp1_sangre1_pat1">
@@ -987,7 +1040,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -1195,7 +1250,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Patrón 1</label>
                             <select class="form-control" id="comp2_sangre2_pat1" name="comp2_sangre2_pat1">
@@ -1283,7 +1340,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -1483,7 +1542,7 @@
 
     <br><br>
 
-    <div class="card text-white bg-dark mb-3">
+    <div class="card text-white bg-dark mb-3" id="deluxe">
         <div class="card-header">
             <h2>Deluxe - Capela + Minutos a Sangre</h2>
         </div>
@@ -1491,7 +1550,9 @@
             <div class="cotainer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <center><h3><%= competidor1 %></h3></center>
+                        <center>
+                            <h3><%= competidor1 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Capela 1</label>
                             <select class="form-control" id="comp1_deluxe_cap1" name="comp1_deluxe_cap1">
@@ -1630,7 +1691,9 @@
 
                     </div>
                     <div class=" col-sm-6">
-                        <center><h3><%= competidor2 %></h3></center>
+                        <center>
+                            <h3><%= competidor2 %></h3>
+                        </center>
                         <div class=" form-group">
                             <label for="exampleSelect1">Capela 1</label>
                             <select class="form-control" id="comp2_deluxe_cap1" name="comp2_deluxe_cap1">
@@ -1786,7 +1849,8 @@
 
     <br>
     <center>
-        <button type="submit" class="btn btn-warning btn-lg" style="vertical-align: middle">
+        <button type="submit" class="btn btn-warning btn-lg"
+            style="vertical-align: middle; font-family: 'Carter One';font-size: 22px;">
             <i class="icon-double-angle-right"></i>
             Calcular resultados!
             <i class="icon-double-angle-left"></i>
@@ -1800,5 +1864,16 @@
 </div>
 
 </body>
+
+<script>
+    $("a[href^='#']").click(function (e) {
+        e.preventDefault();
+
+        var position = $($(this).attr("href")).offset().top;
+
+        $("body, html").animate({
+            scrollTop: position
+        } /* speed */);
+    });</script>
 
 </html>

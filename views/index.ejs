@@ -1,15 +1,58 @@
-<% include partials/_header %>
+<html>
 
-    <form method="POST" action="/puntuacion" class="form-group has-danger" style="margin-top: 20%">
+<head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand" href="/" style="font-size: 35px; color: white">
+                
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container"∫∫>
+        <center><img src="images/logo2.png" style="margin-top: 70px"></center>
+</div>
+
+    <form method="POST" action="/puntuacion" class="form-group has-danger" style="margin-top: 5%">
         <div class="cotainer">
             <div class="row">
                 <div class="col-sm-6"">
                     <h5>Primer Competidor:</h5>
                     <% if (typeof(invalid) != 'undefined'){ %>
                     <% if (invalid == true) { %>
-                    <input class=" form-control is-invalid" type="text" name="titles"
-                    placeholder="Bebe, I just wanna live with you. I love you Mélissa.">
-                    <div class="invalid-feedback">This field can not be empty!</div>
+                    <input class=" form-control is-invalid" type="text" name="competidor1"
+                    placeholder="Nombre o Apodo...">
+                    <div class="invalid-feedback">Tiene que haber dos competidores!</div>
                     <% } %>
                     <% }else { %>
                     <input class="form-control" type="text" name="competidor1" placeholder="Nombre o Apodo...">
@@ -25,9 +68,9 @@
                     <h5>Segundo Competidor:</h5>
                     <% if (typeof(invalid) != 'undefined'){ %>
                     <% if (invalid == true) { %>
-                    <input class="form-control is-invalid" type="text" name="playlistname"
-                        placeholder="Playlist for that person...">
-                    <div class="invalid-feedback">This field can not be empty!</div>
+                    <input class="form-control is-invalid" type="text" name="competidor2"
+                        placeholder="Nombre o Apodo...">
+                    <div class="invalid-feedback">Tiene que haber dos competidores!</div>
                     <% } %>
                     <% }else { %>
                     <input class="form-control" type="text" name="competidor2" placeholder="Nombre o Apodo...">
@@ -45,7 +88,7 @@
 
         <br><br><br>
         <center>
-            <button type="submit" class="btn btn-warning btn-lg" style="vertical-align: middle">
+            <button type="submit" class="btn btn-warning btn-lg" style="vertical-align: middle; font-family: 'Carter One'; font-size: 22px;">
                 <i class="icon-double-angle-right"></i>
                 Comenzar!
                 <i class="icon-double-angle-left"></i>
